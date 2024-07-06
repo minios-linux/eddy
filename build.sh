@@ -16,7 +16,7 @@ else
 fi
 
 # Clone Upstream using NAME
-git clone $REPO/$NAME -b $VERSION
+git clone $REPO -b $VERSION
 mv ./eddy ./$PACKAGE_NAME-$PACKAGE_VERSION
 cp -rvf ./debian ./$PACKAGE_NAME-$PACKAGE_VERSION
 cd ./$PACKAGE_NAME-$PACKAGE_VERSION
