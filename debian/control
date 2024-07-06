@@ -1,0 +1,26 @@
+Source: com.github.donadigo.eddy
+Section: utils
+Priority: optional
+Maintainer: crims0n <crims0n@minios.dev>
+Build-Depends: debhelper (>= 9),
+               valac,
+               libgranite-dev,
+               libpackagekit-glib2-dev,
+               libunity-dev,
+               meson,
+               ninja-build,
+               libzeitgeist-2.0-dev,
+               gettext
+Standards-Version: 3.9.8
+Homepage: https://github.com/donadigo/eddy
+
+Package: com.github.donadigo.eddy
+Architecture: any
+Depends: packagekit, ${shlibs:Depends}, ${misc:Depends}
+Description: Eddy - Debian package management tool for elementary OS
+ Eddy is a simple and user-friendly Debian package management tool.
+ It is designed specifically for elementary OS. It allows users to
+ install, update, and uninstall Debian packages with ease. In addition
+ to managing Debian packages, Eddy also supports other packaging
+ formats such as .rpm, thanks to its PackageKit backend. This makes
+ Eddy a versatile tool for managing packages on any Debian-based system.

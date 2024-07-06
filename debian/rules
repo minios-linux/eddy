@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+override_dh_auto_configure:
+	meson --prefix=/usr --buildtype=plain debian/build/
+override_dh_auto_build:
+	ninja -C debian/build/
+override_dh_auto_install:
+	DESTDIR=$$(pwd)/debian/com.github.donadigo.eddy ninja -C debian/build/ install
