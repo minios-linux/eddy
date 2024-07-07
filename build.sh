@@ -2,7 +2,7 @@
 
 # Define variables
 REPO=https://github.com/donadigo/eddy
-NAME=com.github.donadigo.eddy
+NAME=eddy
 VERSION=1.3.2
 
 # Convert NAME to lower case

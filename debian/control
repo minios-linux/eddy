@@ -1,4 +1,4 @@
-Source: com.github.donadigo.eddy
+Source: eddy
 Section: utils
 Priority: optional
 Maintainer: crims0n <crims0n@minios.dev>
@@ -14,7 +14,7 @@ Build-Depends: debhelper (>= 9),
 Standards-Version: 3.9.8
 Homepage: https://github.com/donadigo/eddy
 
-Package: com.github.donadigo.eddy
+Package: eddy
 Architecture: any
 Depends: packagekit, ${shlibs:Depends}, ${misc:Depends}
 Description: Eddy - Debian package management tool for elementary OS
