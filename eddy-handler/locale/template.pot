@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-07 18:50+0300\n"
+"POT-Creation-Date: 2024-07-07 23:29+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,18 +17,25 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: eddy-handler:11
+#: eddy-handler:14
 msgid "Update"
 msgstr ""
 
-#: eddy-handler:11
+#: eddy-handler:14
 msgid "Updating the database..."
 msgstr ""
 
-#: eddy-handler:15
+#: eddy-handler:18 eddy-handler:22
 msgid "Error"
 msgstr ""
 
-#: eddy-handler:15
+#: eddy-handler:18
 msgid "Update was aborted"
+msgstr ""
+
+#: eddy-handler:22
+msgid ""
+"Internet connection is not available. The database has not been updated, and "
+"if the package you want to install requires the installation of "
+"dependencies, it will not be installed. Do you want to continue?"
 msgstr ""

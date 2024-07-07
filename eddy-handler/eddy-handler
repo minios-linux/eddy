@@ -3,17 +3,26 @@
 export TEXTDOMAIN="eddy-handler"
 
 # If the file does not exist or is older than a day, we start the update
-if [ ! -e /var/cache/apt/pkgcache.bin ] || (( $(date +%s) - $(stat -c %Y /var/cache/apt/pkgcache.bin) >= 24*60*60 )); then
-    # We update the database and display progress in a yad window with the system-software-update icon
-    apt-get update 2>&1 | while read line; do
-        echo "# $line"
-        sleep 0.1
-    done | yad --progress --title="$(gettext "Update")" --text="$(gettext "Updating the database...")" --pulsate --auto-close --center --no-buttons --window-icon=system-software-update
+if [ ! -e /var/cache/apt/pkgcache.bin ] || (($(date +%s) - $(stat -c %Y /var/cache/apt/pkgcache.bin) >= 24 * 60 * 60)); then
+    # Check for internet connection
+    wget -q --spider http://google.com
 
-    # If yad was closed, we abort the script
-    if [ $? -eq 252 ]; then
-        yad --error --title="$(gettext "Error")" --text="$(gettext "Update was aborted")" --center --button=gtk-ok:0 --window-icon=error
-        exit 1
+    if [ $? -eq 0 ]; then
+        # We update the database and display progress in a yad window with the system-software-update icon
+        apt-get update 2>&1 | while read line; do
+            echo "# $line"
+        done | yad --progress --width=500 --height=200 --title="$(gettext "Update")" --text="$(gettext "Updating the database...")" --pulsate --auto-close --center --no-buttons --window-icon=system-software-update --enable-log --log-expanded
+
+        # If yad was closed, we abort the script
+        if [ $? -eq 252 ]; then
+            yad --error --width=300 --height=100 --title="$(gettext "Error")" --text="$(gettext "Update was aborted")" --center --button=gtk-ok:0 --window-icon=error
+            exit 1
+        fi
+    else
+        yad --question --width=400 --height=100 --title="$(gettext "Error")" --text="$(gettext "Internet connection is not available. The database has not been updated, and if the package you want to install requires the installation of dependencies, it will not be installed. Do you want to continue?")" --center --button=gtk-yes:0 --button=gtk-no:1 --window-icon=error
+        if [ $? -eq 1 ]; then
+            exit 1
+        fi
     fi
 fi
 

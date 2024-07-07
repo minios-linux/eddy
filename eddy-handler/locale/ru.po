@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eddy-handler 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-03 21:21+0300\n"
+"POT-Creation-Date: 2024-07-07 23:29+0300\n"
 "PO-Revision-Date: 2024-07-02 12:00+0300\n"
 "Last-Translator: crims0n <crims0n@minios.dev>, 2024.\n"
 "Language-Team: Russian\n"
@@ -18,18 +18,28 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: eddy-handler:11
+#: eddy-handler:14
 msgid "Update"
 msgstr "Обновление"
 
-#: eddy-handler:11
+#: eddy-handler:14
 msgid "Updating the database..."
 msgstr "Обновление базы данных..."
 
-#: eddy-handler:15
+#: eddy-handler:18 eddy-handler:22
 msgid "Error"
 msgstr "Ошибка"
 
-#: eddy-handler:15
+#: eddy-handler:18
 msgid "Update was aborted"
 msgstr "Обновление было прервано"
+
+#: eddy-handler:22
+msgid ""
+"Internet connection is not available. The database has not been updated, and "
+"if the package you want to install requires the installation of "
+"dependencies, it will not be installed. Do you want to continue?"
+msgstr ""
+"Интернет-соединение недоступно. База данных не была обновлена, и "
+"если пакет, который вы хотите установить, требует установки "
+"зависимостей, он не будет установлен. Вы хотите продолжить?"
