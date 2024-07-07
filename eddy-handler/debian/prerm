@@ -1,0 +1,6 @@
+#!/bin/sh
+# Check if the file exists
+if [ -f /usr/share/applications/eddy.desktop ]; then
+    # Revert to the original value
+    sed -i 's/Exec=eddy-handler %U/Exec=eddy %U/g' /usr/share/applications/eddy.desktop
+fi

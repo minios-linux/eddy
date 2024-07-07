@@ -1,0 +1,6 @@
+#!/bin/sh
+# Check if the file exists
+if [ -f /usr/share/applications/eddy.desktop ]; then
+    # Replace the line in the file
+    sed -i 's/Exec=eddy %U/Exec=eddy-handler %U/g' /usr/share/applications/eddy.desktop
+fi

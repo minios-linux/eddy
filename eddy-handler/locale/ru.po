@@ -1,0 +1,35 @@
+# Russian translations for eddy-handler package.
+# Copyright (C) 2024 MiniOS Linux.
+# This file is distributed under the same license as the eddy-handler package.
+# crims0n <crims0n@minios.dev>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: eddy-handler 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-03 21:21+0300\n"
+"PO-Revision-Date: 2024-07-02 12:00+0300\n"
+"Last-Translator: crims0n <crims0n@minios.dev>, 2024.\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: eddy-handler:11
+msgid "Update"
+msgstr "Обновление"
+
+#: eddy-handler:11
+msgid "Updating the database..."
+msgstr "Обновление базы данных..."
+
+#: eddy-handler:15
+msgid "Error"
+msgstr "Ошибка"
+
+#: eddy-handler:15
+msgid "Update was aborted"
+msgstr "Обновление было прервано"
