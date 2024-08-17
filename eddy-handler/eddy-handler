@@ -9,7 +9,7 @@ if [ ! -e /var/cache/apt/pkgcache.bin ] || (($(date +%s) - $(stat -c %Y /var/cac
 
     if [ $? -eq 0 ]; then
         # We update the database and display progress in a yad window with the system-software-update icon
-        apt-get update 2>&1 | while read line; do
+        sudo apt-get update 2>&1 | while read line; do
             echo "# $line"
         done | yad --progress --width=500 --height=200 --title="$(gettext "Update")" --text="$(gettext "Updating the database...")" --pulsate --auto-close --center --no-buttons --window-icon=system-software-update --enable-log --log-expanded
 

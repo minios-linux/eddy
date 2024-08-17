@@ -8,7 +8,7 @@ Homepage: https://minios.dev
 
 Package: eddy-handler
 Architecture: all
-Depends: yad, apt, eddy, ${misc:Depends}
+Depends: yad, apt, eddy, gettext-base, ${misc:Depends}
 Description: Eddy Handler for package updates.
  Eddy Handler is a utility designed to update the package database
  before installing packages with Eddy. It checks if the package cache
